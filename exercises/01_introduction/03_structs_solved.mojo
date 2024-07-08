@@ -12,6 +12,14 @@ struct MyPair:
     fn show(self) -> None:
         print(self.first, self.second)
 
+# # Can mojo add a new attribute to a struct instance?
+# fn add_attribute() -> None:
+#     var first: Int = 2
+#     var second: Int = 4
+#     var mine = MyPair(first, second)
+#     mine.third = "third"
+#     print(mine.new_attribute)
+
 # Do not change this function
 fn use_mypair() -> None:
     var first: Int = 2
@@ -21,3 +29,4 @@ fn use_mypair() -> None:
 
 fn main() raises:
     use_mypair()
+    # add_attribute()
