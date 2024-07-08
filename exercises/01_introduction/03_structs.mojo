@@ -20,6 +20,22 @@ fn add_attribute() -> None:
     mine.third = "third"
     print(mine.new_attribute)
 
+# Can Mojo use inheritance with structs?
+class MyAdvancedPair(MyPair):
+    def __init__(self, first, second, third):
+        super().__init__(first, second)
+        self.third = third
+
+    def show(self):
+        print(self.first, self.second, self.third)
+
+fn use_advanced_pair() -> None:
+    var first: Int = 2
+    var second: Int = 4
+    var third: String = "third"
+    var mine = MyAdvancedPair(first, second, third)
+    mine.show()
+
 # Do not change this function
 fn use_mypair() -> None:
     var first: Int = 2
@@ -30,3 +46,4 @@ fn use_mypair() -> None:
 fn main() raises:
     use_mypair()
     add_attribute()
+    use_advanced_pair()
